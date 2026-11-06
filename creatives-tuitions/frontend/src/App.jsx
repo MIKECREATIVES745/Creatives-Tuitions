@@ -18,7 +18,7 @@ function App(){
  const d=await request(path,{method,body:body instanceof FormData?body:JSON.stringify(body)});setNotice(d.temporary_password?`Account created. Temporary password: ${d.temporary_password}`:(d.message||'Saved successfully.'));setModal(null);await load();}catch(x){setError(x.message);}};
  const open=(type,title,id=null)=>{setError('');setModal({type,title,id});};
  if(!token||!user)return <div className="login-shell"><div className="login-art"><div className="brand-mark"><GraduationCap size={30}/></div><div><p className="eyebrow">ZAMBIA · STUDENT LEARNING</p><h1>Learn better.<br/><em>Achieve more.</em></h1><p className="muted-light">Live tuition, trusted tutors and learning resources — all in one place.</p></div><div className="login-foot">CREATIVES TUITIONS <span>© 2026</span></div></div><form className="login-card" onSubmit={login}><img
-  src="/public/IMG_1993.jpeg"
+  src="/IMG_1993.jpeg"
   alt="Creatives Tuitions Logo"
   className="login-logo"
 /><span className="brand-small">Creatives Tuitions</span><p className="eyebrow">WELCOME BACK</p><h2>Sign in to your account</h2><p className="subtle">Use the login details provided by your administrator.</p><label>Email address<input name="email" type="email" placeholder="you@example.com" required/></label><label>Password<input name="password" type="password" placeholder="Enter your password" required/></label>{error&&<div className="alert error">{error}</div>}<button className="primary full">Sign in <span>→</span></button><p className="tiny">Need access? Contact the tuition centre administrator.</p></form></div>;
